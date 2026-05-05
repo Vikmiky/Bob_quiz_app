@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- PAGE 1 — Welcome -->
+    <div class="container" id="screen1">
+      <div class="wel" id="wel">
+        <div class="weltext" id="weltext">
+          <div class="land" id="land">
+            <h1>BOB QUIZ APP</h1>
+            <h2>Let's test your knowledge!</h2>
+            <button onclick="goToScreen2()">Next →</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg12">
+        <img src="img/topimg.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- PAGE 2 — Name Input -->
+    <div class="cont2" id="screen2" style="display: none;">
+      <div class="screen2">
+        <div class="emoji">
+          <img src="img/page2img.jpg" alt="">
+        </div>
+        <h2>Welcome to Bob's Quiz! App</h2>
+        <div class="textflex">
+          <h1 class="flex1">Learn,</h1>
+          <span><h1 class="flex2">Play,</h1></span>
+          <span><h1 class="flex3">Grow!</h1></span>
+        </div>
+        <p class="subtitle">Please enter your name to get started!</p>
+
+        <div class="name">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter your name here...."
+          />
+        </div>
+
+        <div class="btn-btn">
+          <button class="start-btn" onclick="startQuiz()">Let's Go →</button>
+          <img src="img/goBtn.png" width="50px" alt="" />
+        </div>
+
+        <button class="back-btn" onclick="goToScreen1()">← Back</button>
+        <p class="error-msg" id="nameError"></p>
+      </div>
+    </div>
+
+    <!-- PAGE 3 — Quiz -->
+    <div class="screen3" id="quizScreen" style="display: none;">
+      <div class="title">
+        <h1>Bob's Quiz</h1>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="user-bar">
+        <span class="user-avatar">👤</span>
+        <span id="displayName">Player</span>
+      </div>
+
+      <img src="img/quizimg2.jpg" alt="">
+
+      
+
+      <p class="question-number" id="questionNumber">Question 1 of 26</p>
+
+      <h2 class="question-text" id="questionText">Question goes here</h2>
+
+      <div class="options" id="options">
+        <button class="option-btn" onclick="checkAnswer(0)">Option A</button>
+        <button class="option-btn" onclick="checkAnswer(1)">Option B</button>
+        <button class="option-btn" onclick="checkAnswer(2)">Option C</button>
+        <button class="option-btn" onclick="checkAnswer(3)">Option D</button>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">
+        Next Question →
+      </button>
+    </div>
+
+    <!-- PAGE 4 — Score -->
+    <div class="score-screen" id="scoreScreen" style="display: none;">
+      <div class="score" id="score">
+        <img src="img/scorepage.jpg" width="300px" alt="">
+      </div>
+
+      <div class="scored">
+        <h2>Completed!</h2>
+        <img src="img/goBtn.png" width="50px" alt="" />
+      </div>
+
+      <div class="ex">
+        <p class="player-name" id="scoreName"></p>
+        <p class="score-text" id="scoreText"></p>
+        <p class="score-message" id="scoreMessage"></p>
+      </div>
+
+      <button class="restart-btn" onclick="restartQuiz()">↺ Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

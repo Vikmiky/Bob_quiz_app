@@ -636,10 +636,7 @@ padding: 0.4em;
 }
 
 
- @media (max-width: 1024px) {
-
-
- }
+ 
 
 
 
@@ -852,3 +849,127 @@ height: 80vh;
 }
 
  }
+
+ 
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .land {
+    min-height: 100vh;
+    border-radius: 0;
+    padding-top: 9rem;
+    gap: 20px;
+  }
+
+  .bg12 img {
+    width: 75%;
+    margin-top: 10px;
+  }
+
+  .land h1 {
+    font-size: 22px;
+  }
+
+  .land h2 {
+    font-size: 15px;
+  }
+
+  .screen2 {
+    min-height: 100vh;
+    border-radius: 0;
+    gap: 12px;
+  }
+
+  .emoji img {
+    max-width: 290px;
+  }
+
+  .screen2 h2 {
+    font-size: 18px;
+  }
+
+  .textflex h1 {
+    font-size: 20px;
+  }
+
+  .name {
+    width: 90%;
+  }
+
+  .screen3 {
+    min-height: 100vh;
+    border-radius: 0;
+    gap: 8px;
+    padding: 1rem 0.5rem;
+  }
+
+  .screen3 img {
+    width: 95%;
+  }
+
+  .options {
+    width: 95%;
+    gap: 8px;
+  }
+
+  .option-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .question-text {
+    font-size: 0.9rem;
+    width: 95%;
+  }
+
+  .question-number {
+    width: 95%;
+  }
+
+  .next-btn {
+    width: 60%;
+  }
+
+  .score-screen {
+    min-height: 100vh;
+    border-radius: 0;
+  }
+
+  .score img {
+    max-width: 260px;
+  }
+
+  .restart-btn {
+    margin-left: 0;
+  }
+
+  .error-msg {
+    position: static;
+    margin-top: 0;
+  }
+}
+
+/* 
+   SMALL PHONES — 360px */
+
+@media (max-width: 360px) {
+  .land h1 {
+    font-size: 19px;
+  }
+
+  .emoji img {
+    max-width: 250px;
+  }
+
+  .option-btn {
+    font-size: 0.8rem;
+  }
+
+  .score-text {
+    font-size: 16px;
+  }
+}
